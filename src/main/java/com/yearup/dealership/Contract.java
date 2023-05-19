@@ -1,42 +1,42 @@
 package com.yearup.dealership;
 
 public abstract class Contract {
-    private String Date;
-    private String name;
-    private String email;
+    private String contractDate;
+    private String customerName;
+    private String customerEmail;
     private int vehicleSold;
     private double totalPrice;
     private double monthlyPayment;
 
-    public Contract(String date, String name, String email, int vehicleSold) {
-        Date = date;
-        this.name = name;
-        this.email = email;
+    public Contract(String contractDate, String customerName, String customerEmail, int vehicleSold) {
+        this.contractDate = contractDate;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
         this.vehicleSold = vehicleSold;
     }
 
-    public String getDate() {
-        return Date;
+    public String getContractDate() {
+        return contractDate;
     }
 
-    public void setDate(String date) {
-        Date = date;
+    public void setContractDate(String contractDate) {
+        this.contractDate = contractDate;
     }
 
-    public String getName() {
-        return name;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
     public int getVehicleSold() {
@@ -46,6 +46,23 @@ public abstract class Contract {
     public void setVehicleSold(int vehicleSold) {
         this.vehicleSold = vehicleSold;
     }
-    public abstract double getTotalPrice();
-    private abstract double getMonthlyPayment();
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public double getMonthlyPayment() {
+        return monthlyPayment;
+    }
+
+    public void setMonthlyPayment(double monthlyPayment) {
+        this.monthlyPayment = monthlyPayment;
+    }
+    public abstract double calculateTotalPrice();
+
+    public abstract double calculateMonthlyPayment();
 }
