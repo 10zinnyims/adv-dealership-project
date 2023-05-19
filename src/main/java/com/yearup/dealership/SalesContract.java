@@ -6,7 +6,7 @@ public abstract class SalesContract extends Contract {
     private double processingFee;
     private boolean financeOption;
 
-    public SalesContract(String date, String name, String email, int vehicleSold, double salesTaxAmount, double recordingFee, double processingFee, boolean financeOption) {
+    public SalesContract(String date, String name, String email, Vehicle vehicleSold, double salesTaxAmount, double recordingFee, double processingFee, boolean financeOption) {
         super(date, name, email, vehicleSold);
         this.salesTaxAmount = salesTaxAmount;
         this.recordingFee = recordingFee;
@@ -72,14 +72,4 @@ public abstract class SalesContract extends Contract {
             return 0.0;
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
