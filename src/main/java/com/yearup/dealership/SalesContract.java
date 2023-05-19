@@ -1,6 +1,6 @@
 package com.yearup.dealership;
 
-public abstract class SalesContract extends Contract {
+public  class SalesContract extends Contract {
     private double salesTaxAmount;
     private double recordingFee;
     private double processingFee;
